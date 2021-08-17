@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { withTranslation } from 'react-i18next';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { withTranslation } from 'react-i18next'
 
 class Footer extends React.Component {
   render() {
-    const { t } = this.props;
+    const { t } = this.props
     return (
       <footer>
         <div className="container d-flex flex-column flex-md-row justify-content-between pt-4">
@@ -98,8 +98,8 @@ class Footer extends React.Component {
           </div>
         </div>
       </footer>
-    );
+    )
   }
 }
 
-export default withTranslation()(Footer);
+export default withTranslation()(Footer)

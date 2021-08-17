@@ -1,7 +1,7 @@
-import React from 'react';
-import UXSelect from './components/UX/UXSelect';
+import React from 'react'
+import UXSelect from './components/UX/UXSelect'
 
-export default { title: 'Select' };
+export default { title: 'Select' }
 
 export const languageList = () => (
   <UXSelect
@@ -13,7 +13,7 @@ export const languageList = () => (
       { value: 'en', label: 'Английский' },
       { value: 'ru', label: 'Русский' },
       { value: 'de', label: 'Немецкий' },
-      { value: 'fr', label: 'Французский' },
+      { value: 'fr', label: 'Французский' }
     ]}
   />
-);
+)

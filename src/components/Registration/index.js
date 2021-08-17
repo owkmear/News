@@ -1,38 +1,31 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import {
-  registration,
-  clearRegistrationMessage,
-} from '../../store/actions/registration';
-import { withTranslation } from 'react-i18next';
+import React from 'react'
+import { connect } from 'react-redux'
+import { registration, clearRegistrationMessage } from '../../store/actions/registration'
+import { withTranslation } from 'react-i18next'
 
-const emailRegex = RegExp(
-  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-);
+const emailRegex = RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
 
-const usernameRegex = RegExp(
-  /^(?=.{8,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/
-);
+const usernameRegex = RegExp(/^(?=.{8,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/)
 
 const formValid = ({ formErrors, ...rest }) => {
-  let valid = true;
+  let valid = true
 
   // Validate form errors being empty
-  Object.values(formErrors).forEach(val => {
-    val.length > 0 && (valid = false);
-  });
+  Object.values(formErrors).forEach((val) => {
+    val.length > 0 && (valid = false)
+  })
 
   // Validate the form was filled out
-  Object.values(rest).forEach(val => {
-    val === null && (valid = false);
-  });
+  Object.values(rest).forEach((val) => {
+    val === null && (valid = false)
+  })
 
-  return valid;
-};
+  return valid
+}
 
 export class Registration extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       username: '',
       email: '',
@@ -40,71 +33,62 @@ export class Registration extends React.Component {
       formErrors: {
         username: '',
         email: '',
-        password: '',
-      },
-    };
+        password: ''
+      }
+    }
 
-    this.usernameRef = React.createRef();
+    this.usernameRef = React.createRef()
   }
 
   componentDidMount() {
-    this.usernameRef.current.focus();
+    this.usernameRef.current.focus()
   }
 
-  handleSubmit = e => {
-    e.preventDefault();
+  handleSubmit = (e) => {
+    e.preventDefault()
 
     if (formValid(this.state)) {
-      console.error('FORM VALID');
-      const { username, email, password } = this.state;
-      const { registration } = this.props;
-      registration(username, email, password);
+      console.error('FORM VALID')
+      const { username, email, password } = this.state
+      const { registration } = this.props
+      registration(username, email, password)
       this.setState({
-        password: '',
-      });
+        password: ''
+      })
     } else {
-      console.error('FORM INVALID');
+      console.error('FORM INVALID')
     }
-  };
+  }
 
-  handleChange = e => {
-    e.preventDefault();
-    const { name, value } = e.target;
-    let formErrors = { ...this.state.formErrors };
-    const { t } = this.props;
+  handleChange = (e) => {
+    e.preventDefault()
+    const { name, value } = e.target
+    let formErrors = { ...this.state.formErrors }
+    const { t } = this.props
 
     switch (name) {
       case 'username':
-        formErrors.username = !usernameRegex.test(value)
-          ? t('registration.username-error')
-          : '';
-        break;
+        formErrors.username = !usernameRegex.test(value) ? t('registration.username-error') : ''
+        break
       case 'email':
-        formErrors.email = emailRegex.test(value)
-          ? ''
-          : t('registration.email-error');
-        break;
+        formErrors.email = emailRegex.test(value) ? '' : t('registration.email-error')
+        break
       case 'password':
-        formErrors.password =
-          value.length < 4 ? t('login.password-error', { symbols: 4 }) : '';
-        break;
+        formErrors.password = value.length < 4 ? t('login.password-error', { symbols: 4 }) : ''
+        break
       default:
-        break;
+        break
     }
 
-    this.setState({ formErrors, [name]: value }, () => console.log(this.state));
+    this.setState({ formErrors, [name]: value }, () => console.log(this.state))
 
-    const {
-      clearRegistrationMessage,
-      successMessage,
-      errorMessage,
-    } = this.props;
-    if (successMessage || errorMessage) clearRegistrationMessage();
-  };
+    const { clearRegistrationMessage, successMessage, errorMessage } = this.props
+    if (successMessage || errorMessage) clearRegistrationMessage()
+  }
 
   render() {
-    const { t, isLoading, successMessage, errorMessage } = this.props;
-    const { formErrors } = this.state;
+    const { t, isLoading, successMessage, errorMessage } = this.props
+    const { formErrors } = this.state
 
     return (
       <div className="container">
@@ -115,9 +99,7 @@ export class Registration extends React.Component {
                 <section className="registration">
                   <div className="row">
                     <div className="col-4 m-auto">
-                      <h2 className="block__header mb-4 mt-1">
-                        {t('registration.sign-up')}
-                      </h2>
+                      <h2 className="block__header mb-4 mt-1">{t('registration.sign-up')}</h2>
                       <form className="form" onSubmit={this.handleSubmit}>
                         <div className="form__group">
                           <label>{t('registration.username')}</label>
@@ -136,8 +118,7 @@ export class Registration extends React.Component {
                             name="username"
                           />
                           <div className="form__field-error">
-                            {formErrors.username.length > 0 &&
-                              formErrors.username}
+                            {formErrors.username.length > 0 && formErrors.username}
                           </div>
                         </div>
 
@@ -176,8 +157,7 @@ export class Registration extends React.Component {
                             name="password"
                           />
                           <div className="form__field-error">
-                            {formErrors.password.length > 0 &&
-                              formErrors.password}
+                            {formErrors.password.length > 0 && formErrors.password}
                           </div>
                         </div>
 
@@ -224,24 +204,21 @@ export class Registration extends React.Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     isLoading: state.registration.isLoading,
     successMessage: state.registration.successMessage,
-    errorMessage: state.registration.errorMessage,
-  };
-};
+    errorMessage: state.registration.errorMessage
+  }
+}
 
 const mapDispatchToProps = {
   registration,
-  clearRegistrationMessage,
-};
+  clearRegistrationMessage
+}
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(withTranslation()(Registration));
+export default connect(mapStateToProps, mapDispatchToProps)(withTranslation()(Registration))

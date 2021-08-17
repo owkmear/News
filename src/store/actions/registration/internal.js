@@ -1,27 +1,27 @@
-import * as t from '../../actionTypes/registration';
+import * as t from '../../actionTypes/registration'
 
 export function registrationRequest() {
   return {
-    type: t.REGISTRATION_GET_REQUEST,
-  };
+    type: t.REGISTRATION_GET_REQUEST
+  }
 }
 
 export function registrationSuccess(successMessage) {
   return {
     type: t.REGISTRATION_GET_SUCCESS,
-    payload: successMessage,
-  };
+    payload: successMessage
+  }
 }
 
 export function registrationFailure(errorMessage) {
   return {
     type: t.REGISTRATION_GET_FAILURE,
-    payload: errorMessage,
-  };
+    payload: errorMessage
+  }
 }
 
 export function registrationClear() {
   return {
-    type: t.REGISTRATION_GET_CLEAR,
-  };
+    type: t.REGISTRATION_GET_CLEAR
+  }
 }

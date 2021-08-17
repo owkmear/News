@@ -1,18 +1,18 @@
-import React from 'react';
-import { getCurrenciesList } from '../../store/actions/currencies';
-import { connect } from 'react-redux';
-import Spinner from '../Spinner';
-import { withTranslation } from 'react-i18next';
-import './Cryptocurrency.sass';
+import React from 'react'
+import { getCurrenciesList } from '../../store/actions/currencies'
+import { connect } from 'react-redux'
+import Spinner from '../Spinner'
+import { withTranslation } from 'react-i18next'
+import './Cryptocurrency.sass'
 
 class Cryptocurrency extends React.Component {
   componentWillMount() {
-    this.props.getCurrenciesList();
+    this.props.getCurrenciesList()
   }
   render() {
-    const { t, data, isLoading, errorMessage } = this.props;
+    const { t, data, isLoading, errorMessage } = this.props
 
-    const currencyTable = data.map(currency => (
+    const currencyTable = data.map((currency) => (
       <tr key={currency.symbol}>
         <td>{currency.name}</td>
         <td>${currency.quote.USD.market_cap}</td>
@@ -23,7 +23,7 @@ class Cryptocurrency extends React.Component {
         </td>
         <td>{currency.quote.USD.percent_change_24h}%</td>
       </tr>
-    ));
+    ))
 
     return (
       <div className="container">
@@ -34,9 +34,7 @@ class Cryptocurrency extends React.Component {
                 <section className="cryptocurrency">
                   <div className="row">
                     <div className="col">
-                      <h2 className="block__header">
-                        {t('cryptocurrency.top')}
-                      </h2>
+                      <h2 className="block__header">{t('cryptocurrency.top')}</h2>
                       {isLoading ? (
                         <div className="d-flex justify-content-center">
                           <Spinner />
@@ -58,9 +56,7 @@ class Cryptocurrency extends React.Component {
                           <tbody>{currencyTable}</tbody>
                         </table>
                       ) : (
-                        <p className="news__empty">
-                          {t('cryptocurrency.no news')}
-                        </p>
+                        <p className="news__empty">{t('cryptocurrency.no news')}</p>
                       )}
                     </div>
                   </div>
@@ -70,23 +66,20 @@ class Cryptocurrency extends React.Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     data: state.currencies.data,
     isLoading: state.currencies.isLoading,
-    errorMessage: state.currencies.errorMessage,
-  };
-};
+    errorMessage: state.currencies.errorMessage
+  }
+}
 
 const mapDispatchToProps = {
-  getCurrenciesList,
-};
+  getCurrenciesList
+}
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(withTranslation()(Cryptocurrency));
+export default connect(mapStateToProps, mapDispatchToProps)(withTranslation()(Cryptocurrency))

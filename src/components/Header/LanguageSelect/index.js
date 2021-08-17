@@ -1,29 +1,27 @@
-import React from 'react';
-import UXSelect from '../../UX/UXSelect';
-import './LanguageSelect.sass';
+import React from 'react'
+import UXSelect from '../../UX/UXSelect'
+import './LanguageSelect.sass'
 
 const options = [
   { value: 'en', label: 'English' },
-  { value: 'ru', label: 'Russian' },
-];
+  { value: 'ru', label: 'Russian' }
+]
 
 class LanguageSelect extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      selectedOption: options.find(
-        lang => lang.value === props.defaultLanguage
-      ),
-    };
+      selectedOption: options.find((lang) => lang.value === props.defaultLanguage)
+    }
   }
 
-  handleChange = selectedOption => {
-    const { changeLanguage } = this.props;
-    this.setState({ selectedOption });
-    changeLanguage(selectedOption.value);
-  };
+  handleChange = (selectedOption) => {
+    const { changeLanguage } = this.props
+    this.setState({ selectedOption })
+    changeLanguage(selectedOption.value)
+  }
   render() {
-    const { selectedOption } = this.state;
+    const { selectedOption } = this.state
 
     return (
       <UXSelect
@@ -33,8 +31,8 @@ class LanguageSelect extends React.Component {
         onChange={this.handleChange}
         options={options}
       />
-    );
+    )
   }
 }
 
-export default LanguageSelect;
+export default LanguageSelect

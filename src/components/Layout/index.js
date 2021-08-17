@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 
-import Header from '../Header';
-import Footer from '../Footer';
-import Routes from '../../routes';
-import GridSpinner from '../Spinner/GridSpinner';
-import './Layout.sass';
+import Header from '../Header'
+import Footer from '../Footer'
+import Routes from '../../routes'
+import GridSpinner from '../Spinner/GridSpinner'
+import './Layout.sass'
 
-const Layout = props => {
+const Layout = (props) => {
   return props.ui.dataLoaded ? (
     <div className="wrapper d-flex flex-column">
       <Header {...props} />
@@ -19,6 +19,6 @@ const Layout = props => {
     <div className="layout">
       <GridSpinner />
     </div>
-  );
-};
-export default Layout;
+  )
+}
+export default Layout

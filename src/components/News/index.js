@@ -1,15 +1,15 @@
-import React from 'react';
-import { getNewsList } from '../../store/actions/news';
-import { connect } from 'react-redux';
-import ArticlesList from './ArticlesList';
-import Spinner from '../Spinner';
+import React from 'react'
+import { getNewsList } from '../../store/actions/news'
+import { connect } from 'react-redux'
+import ArticlesList from './ArticlesList'
+import Spinner from '../Spinner'
 
 export class News extends React.Component {
   componentWillMount() {
-    this.props.getNewsList();
+    this.props.getNewsList()
   }
   render() {
-    const { data, isLoading, errorMessage } = this.props;
+    const { data, isLoading, errorMessage } = this.props
     return (
       <div className="container">
         <div className="row">
@@ -39,23 +39,20 @@ export class News extends React.Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     data: state.news.data,
     isLoading: state.news.isLoading,
-    errorMessage: state.news.errorMessage,
-  };
-};
+    errorMessage: state.news.errorMessage
+  }
+}
 
 const mapDispatchToProps = {
-  getNewsList,
-};
+  getNewsList
+}
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(News);
+export default connect(mapStateToProps, mapDispatchToProps)(News)

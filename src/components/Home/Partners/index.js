@@ -1,15 +1,12 @@
-import React from 'react';
-import './Partners.sass';
+import React from 'react'
+import './Partners.sass'
 
 class Partners extends React.Component {
   render() {
     return (
       <div className="partners">
         <div className="partners__block">
-          <a
-            rel="nofollow"
-            href="http://bitcoinist.com/indacoin-buying-bitcoin-credit-card/"
-          >
+          <a rel="nofollow" href="http://bitcoinist.com/indacoin-buying-bitcoin-credit-card/">
             <span className="sprite-wrapper">
               <i className="partners-blue partners-blue-1"></i>
             </span>
@@ -38,8 +35,8 @@ class Partners extends React.Component {
           </a>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Partners;
+export default Partners

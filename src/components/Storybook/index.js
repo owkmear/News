@@ -1,12 +1,12 @@
-import React from 'react';
-import './Storybook.sass';
-import UXSelect from '../UX/UXSelect';
-import UXRow from '../UX/UXRow';
-import UXFigure from '../UX/UXFigure';
+import React from 'react'
+import './Storybook.sass'
+import UXSelect from '../UX/UXSelect'
+import UXRow from '../UX/UXRow'
+import UXFigure from '../UX/UXFigure'
 
 class Storybook extends React.Component {
   render() {
-    const langs = ['en', 'ru'];
+    const langs = ['en', 'ru']
     const fonts = [
       'FuturaBookC Regular',
       'FuturaDemiC Regular',
@@ -14,27 +14,23 @@ class Storybook extends React.Component {
       'FuturaFuturisBlackC Regular',
       'FuturaFuturisLightC Regular',
       'FuturaLightC Regular',
-      'Futura-Normal Regulal',
-    ];
+      'Futura-Normal Regulal'
+    ]
 
     // TODO: Error with unique "key" prop: rewrite this Component
     // TODO: сгруппировать по языкам
     // TODO: добавить цвета, кнопки и прочее
-    const pangrams = langs.map(lang => {
-      const body = fonts.map(font => (
-        <Pangram
-          key={`${lang}${font.replace(/[\d]|[^\w]/g, '')}`}
-          lang={lang}
-          font={font}
-        />
-      ));
+    const pangrams = langs.map((lang) => {
+      const body = fonts.map((font) => (
+        <Pangram key={`${lang}${font.replace(/[\d]|[^\w]/g, '')}`} lang={lang} font={font} />
+      ))
       return (
         <div key={lang} className="storybook__language">
           <div className="storybook__title justify-content-center">{lang}</div>
           {body}
         </div>
-      );
-    });
+      )
+    })
 
     return (
       <div className="container">
@@ -56,7 +52,7 @@ class Storybook extends React.Component {
                           { value: 'en', label: 'Английский' },
                           { value: 'ru', label: 'Русский' },
                           { value: 'de', label: 'Немецкий' },
-                          { value: 'fr', label: 'Французский' },
+                          { value: 'fr', label: 'Французский' }
                         ]}
                       />
                       <div className="storybook__caption">UXRow</div>
@@ -91,20 +87,20 @@ class Storybook extends React.Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-const Pangram = props => {
-  const { lang, font } = props;
-  let text = null;
+const Pangram = (props) => {
+  const { lang, font } = props
+  let text = null
   switch (lang) {
     case 'ru':
-      text = 'Cъешь ещё этих мягких французских булок, да выпей чаю';
-      break;
+      text = 'Cъешь ещё этих мягких французских булок, да выпей чаю'
+      break
     case 'en':
     default:
-      text = 'The quick brown fox jumps over the lazy dog';
+      text = 'The quick brown fox jumps over the lazy dog'
   }
   return (
     <div className="storybook__pangram" style={{ fontFamily: font }}>
@@ -112,7 +108,7 @@ const Pangram = props => {
       <span className="storybook__text">{text}</span>
       <hr />
     </div>
-  );
-};
+  )
+}
 
-export default Storybook;
+export default Storybook

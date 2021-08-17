@@ -1,5 +1,5 @@
 const initialState = {
   dataLoaded: false
-};
+}
 
-export default initialState;
+export default initialState

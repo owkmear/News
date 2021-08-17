@@ -1,87 +1,84 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { login, clearLoginMessage } from '../../store/actions/login';
-import { withTranslation } from 'react-i18next';
+import React from 'react'
+import { connect } from 'react-redux'
+import { login, clearLoginMessage } from '../../store/actions/login'
+import { withTranslation } from 'react-i18next'
 
-const emailRegex = RegExp(
-  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-);
+const emailRegex = RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
 
 const formValid = ({ formErrors, ...rest }) => {
-  let valid = true;
+  let valid = true
 
   // Validate form errors being empty
-  Object.values(formErrors).forEach(val => {
-    val.length > 0 && (valid = false);
-  });
+  Object.values(formErrors).forEach((val) => {
+    val.length > 0 && (valid = false)
+  })
 
   // Validate the form was filled out
-  Object.values(rest).forEach(val => {
-    val === null && (valid = false);
-  });
+  Object.values(rest).forEach((val) => {
+    val === null && (valid = false)
+  })
 
-  return valid;
-};
+  return valid
+}
 
 export class Login extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       email: '',
       password: '',
       formErrors: {
         email: '',
-        password: '',
-      },
-    };
+        password: ''
+      }
+    }
 
-    this.emailRef = React.createRef();
+    this.emailRef = React.createRef()
   }
 
   componentDidMount() {
-    this.emailRef.current.focus();
+    this.emailRef.current.focus()
   }
 
-  handleSubmit = e => {
-    e.preventDefault();
+  handleSubmit = (e) => {
+    e.preventDefault()
 
     if (formValid(this.state)) {
-      const { email, password } = this.state;
-      const { login } = this.props;
-      login(email, password);
+      const { email, password } = this.state
+      const { login } = this.props
+      login(email, password)
       this.setState({
-        password: '',
-      });
+        password: ''
+      })
     }
-  };
+  }
 
-  handleChange = e => {
-    e.preventDefault();
-    const { name, value } = e.target;
-    let formErrors = { ...this.state.formErrors };
-    const { t } = this.props;
+  handleChange = (e) => {
+    e.preventDefault()
+    const { name, value } = e.target
+    let formErrors = { ...this.state.formErrors }
+    const { t } = this.props
 
     switch (name) {
       case 'email':
-        formErrors.email = emailRegex.test(value) ? '' : t('login.email-error');
-        break;
+        formErrors.email = emailRegex.test(value) ? '' : t('login.email-error')
+        break
       case 'password':
-        formErrors.password =
-          value.length < 4 ? t('login.password-error', { symbols: 4 }) : '';
-        break;
+        formErrors.password = value.length < 4 ? t('login.password-error', { symbols: 4 }) : ''
+        break
       default:
-        break;
+        break
     }
 
-    this.setState({ formErrors, [name]: value });
+    this.setState({ formErrors, [name]: value })
 
-    const { clearLoginMessage, successMessage, errorMessage } = this.props;
-    if (successMessage || errorMessage) clearLoginMessage();
-  };
+    const { clearLoginMessage, successMessage, errorMessage } = this.props
+    if (successMessage || errorMessage) clearLoginMessage()
+  }
 
   render() {
-    const { t, isLoading, successMessage, errorMessage } = this.props;
-    const { formErrors } = this.state;
+    const { t, isLoading, successMessage, errorMessage } = this.props
+    const { formErrors } = this.state
 
     return (
       <div className="container">
@@ -92,9 +89,7 @@ export class Login extends React.Component {
                 <section className="login">
                   <div className="row">
                     <div className="col-4 m-auto">
-                      <h2 className="block__header mb-4 mt-1">
-                        {t('login.sign-in')}
-                      </h2>
+                      <h2 className="block__header mb-4 mt-1">{t('login.sign-in')}</h2>
                       <form className="form" onSubmit={this.handleSubmit}>
                         <div className="form__group">
                           <label>{t('login.email')}</label>
@@ -132,8 +127,7 @@ export class Login extends React.Component {
                             name="password"
                           />
                           <div className="form__field-error">
-                            {formErrors.password.length > 0 &&
-                              formErrors.password}
+                            {formErrors.password.length > 0 && formErrors.password}
                           </div>
                         </div>
 
@@ -179,24 +173,21 @@ export class Login extends React.Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     isLoading: state.login.isLoading,
     successMessage: state.login.successMessage,
-    errorMessage: state.login.errorMessage,
-  };
-};
+    errorMessage: state.login.errorMessage
+  }
+}
 
 const mapDispatchToProps = {
   login,
-  clearLoginMessage,
-};
+  clearLoginMessage
+}
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(withTranslation()(Login));
+export default connect(mapStateToProps, mapDispatchToProps)(withTranslation()(Login))

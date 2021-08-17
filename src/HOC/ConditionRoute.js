@@ -1,5 +1,5 @@
-import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import React from 'react'
+import { Route, Redirect } from 'react-router-dom'
 
 /**
  * Wrapper for Route from 'react-router-dom' for autorize access to routes.
@@ -8,6 +8,6 @@ import { Route, Redirect } from 'react-router-dom';
  * @param {number} route - Route to redirect.
  */
 const ConditionRoute = ({ condition, route = '/login', ...rest }) =>
-  condition === true ? <Route {...rest} /> : <Redirect to={route} />;
+  condition === true ? <Route {...rest} /> : <Redirect to={route} />
 
-export default ConditionRoute;
+export default ConditionRoute

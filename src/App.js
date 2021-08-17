@@ -1,23 +1,23 @@
-import React, { Suspense } from 'react';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import React, { Suspense } from 'react'
+import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 
-import i18n from './utils/i18n';
-import Layout from './components/Layout';
-import { loadData } from './store/actions/ui';
-import { logout } from './store/actions/user';
+import i18n from './utils/i18n'
+import Layout from './components/Layout'
+import { loadData } from './store/actions/ui'
+import { logout } from './store/actions/user'
 
 class App extends React.Component {
   componentDidMount() {
-    this.props.loadData();
-    var f =   234;
+    this.props.loadData()
+    var f = 234
   }
 
-  changeLanguage = lang => {
+  changeLanguage = (lang) => {
     if (i18n.language !== lang) {
-      i18n.changeLanguage(lang);
+      i18n.changeLanguage(lang)
     }
-  };
+  }
 
   render() {
     return (
@@ -29,20 +29,15 @@ class App extends React.Component {
         />
         ;
       </Suspense>
-    );
+    )
   }
 }
 
-const mapStateToProps = state => ({ ...state });
+const mapStateToProps = (state) => ({ ...state })
 
 const mapDispatchToProps = {
   loadData,
-  logout,
-};
+  logout
+}
 
-export default withRouter(
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(App)
-);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))

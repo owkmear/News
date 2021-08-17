@@ -1,20 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import LogReg from './LogReg';
-import { withTranslation } from 'react-i18next';
-import LanguageSelect from './LanguageSelect';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import LogReg from './LogReg'
+import { withTranslation } from 'react-i18next'
+import LanguageSelect from './LanguageSelect'
 
 class Header extends React.Component {
   render() {
-    const { t, user, logout, changeLanguage, defaultLanguage } = this.props;
+    const { t, user, logout, changeLanguage, defaultLanguage } = this.props
     return (
       <header>
         <nav className="header py-2">
           <div className="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-            <Link
-              className="header__item header__item_light py-2 px-2 d-md-inline-block"
-              to="/"
-            >
+            <Link className="header__item header__item_light py-2 px-2 d-md-inline-block" to="/">
               <span>{t('header.home')}</span>
             </Link>
 
@@ -40,10 +37,7 @@ class Header extends React.Component {
             </Link>
 
             <div>
-              <LanguageSelect
-                changeLanguage={changeLanguage}
-                defaultLanguage={defaultLanguage}
-              />
+              <LanguageSelect changeLanguage={changeLanguage} defaultLanguage={defaultLanguage} />
             </div>
 
             {user.logined && (
@@ -68,8 +62,8 @@ class Header extends React.Component {
           </div>
         </nav>
       </header>
-    );
+    )
   }
 }
 
-export default withTranslation()(Header);
+export default withTranslation()(Header)

@@ -1,1 +1,1 @@
-export const SET_LOAD_STATUS = 'SET_LOAD_STATUS';
+export const SET_LOAD_STATUS = 'SET_LOAD_STATUS'

@@ -1,14 +1,14 @@
-import * as t from '../../actionTypes/ui';
-import initialState from './initialState';
+import * as t from '../../actionTypes/ui'
+import initialState from './initialState'
 
 function ui(state = initialState, action) {
-  switch(action.type) {
+  switch (action.type) {
     case t.SET_LOAD_STATUS: {
-      return { ...state, dataLoaded: action.payload };
+      return { ...state, dataLoaded: action.payload }
     }
     default:
-      return state;
-  };
-};
+      return state
+  }
+}
 
-export default ui;
+export default ui
