@@ -1,0 +1,58 @@
+{
+  "header": {
+    "home": "Домой",
+    "cryptocurrency": "Криптовалюта",
+    "news": "Новости",
+    "articles": "Статьи",
+    "settings": "Настройки",
+    "logout": "Выйти",
+    "login": "Логин",
+    "registration": "Регистрация"
+  },
+  "footer": {
+    "home": "Домой",
+    "cryptocurrency": "Криптовалюта",
+    "news": "Новости",
+    "articles": "Статьи"
+  },
+  "cryptocurrency": {
+    "top": "Топ-100 Криптовалюты по рыночной капитализации",
+    "name": "Наименование",
+    "market cap": "Рыночная капитализация",
+    "price": "Цена",
+    "volume": "Объем (за 24ч)",
+    "sypply": "Циркулирующее предложение",
+    "change": "Изменение (за 24ч)",
+    "no news": "Нет новостей"
+  },
+  "login": {
+    "email": "Почта",
+    "login": "Войти",
+    "sending-data": "Отправка данных...",
+    "password": "Пароль",
+    "sign-in": "Логин",
+    "password-error": "минимум {{symbols}} символа",
+    "email-error": "неверная почта",
+    "response": {
+      "network-error": "Ошибка сети",
+      "success": "Вы успешно пошли",
+      "password-or-login": "Пароль или логин неверные. Попробуйте войти еще раз"
+    }
+  },
+  "registration": {
+    "username": "Имя пользователя",
+    "email": "Почта",
+    "registration": "Регистрация",
+    "sending-data": "Отправка данных...",
+    "password": "Пароль",
+    "sign-up": "Регистрация",
+    "username-error": "неверное имя пользователя",
+    "password-error": "минимум {{symbols}} символа",
+    "email-error": "неверная почта",
+    "response": {
+      "network-error": "Ошибка сети",
+      "success": "Вы успешно зарегистрировались",
+      "password-or-login": "Пароль, имя пользователя или логин неверные. Попробуйте зарегистрироваться еще раз"
+    }
+  }
+}

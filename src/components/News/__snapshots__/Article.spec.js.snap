@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article component Article component should render correctly Render properly 1`] = `
+<div
+  className="news__article"
+>
+  <div
+    className="news__article-image"
+  >
+    <a
+      href="https://images.cryptocompare.com/news/default/coinspeaker.png"
+      rel="noopener noreferrer nofollow"
+      target="_blank"
+      title="See the full article from CryptoNewsZ"
+    >
+      <img
+        alt="Mastercard Seems to Be All Set to Develop Its Own Crypto Wallet Platform"
+        src="https://images.cryptocompare.com/news/financemagnates/coMecOic4g0.jpeg"
+      />
+    </a>
+  </div>
+  <div>
+    <span
+      className="news__name"
+    >
+      CryptoNewsZ
+    </span>
+    <span
+      className="news__time"
+    >
+      2 hours ago
+    </span>
+    <h3
+      className="news__title"
+    >
+      <a
+        href="https://images.cryptocompare.com/news/default/coinspeaker.png"
+        rel="noopener noreferrer nofollow"
+        target="_blank"
+      >
+        Mastercard Seems to Be All Set to Develop Its Own Crypto Wallet Platform
+      </a>
+    </h3>
+    <p
+      className="news__body"
+    >
+      PlusToken, a scam that spread to China and Korea in the past months, accrued vast Bitcoin (BTC) reserves, currently liquidating them in daily tranches.
+    </p>
+    <span
+      className="news__categories-title"
+    >
+      Categories: 
+    </span>
+    <span
+      className="news__categories-list"
+    >
+      BTC
+      <span
+        className="news__category"
+        key="BTC"
+      >
+         | 
+      </span>
+      ETH
+      <span
+        className="news__category"
+        key="BTC,[object Object],ETH"
+      >
+         | 
+      </span>
+      Market
+      <span
+        className="news__category"
+        key="BTC,[object Object],ETH,[object Object],Market"
+      >
+         | 
+      </span>
+      Asia
+    </span>
+  </div>
+</div>
+`;

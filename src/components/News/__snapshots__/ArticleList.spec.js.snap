@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticlesList component Article component should render correctly Render properly 1`] = `
+<div
+  className="news__articles-list"
+>
+  <Article
+    body="Bitcoin has broken out of bearish mode with a near 10-percent surge this morning and looks to be decoupling from alternative cryptocurrencies."
+    categories="BTC|Market|Trading"
+    downvotes="0"
+    guid="https://www.coindesk.com/?p=413057"
+    id="2688074"
+    imageurl="https://images.cryptocompare.com/news/coindesk/ex97cg22wyA.jpeg"
+    key="2688074"
+    lang="EN"
+    published_on={1565003112}
+    source="coindesk"
+    source_info={
+      Object {
+        "img": "https://images.cryptocompare.com/news/default/coindesk.png",
+        "lang": "EN",
+        "name": "CoinDesk",
+      }
+    }
+    tags="Markets|Bitcoin|Markets News|Prices|Bitcoin Dominance Rate"
+    title="Bitcoin Eyes $12K Price Hurdle as Dominance Rate Hits 28-Month High"
+    upvotes="0"
+    url="https://www.coindesk.com/bitcoin-eyes-12k-price-hurdle-as-dominance-rate-hits-28-month-high"
+  />
+  <Article
+    body="PBET has recently got its IEO hosted at LATOKEN exchange on its multi-asset trading platform. The company envisions to conjoin physical casinos with online casinos, thanks to its blockchain crypto-based Unified Gaming platform. Cyprus, August 5st 2019: Next-gen crypto gaming platform PBET is delighted to announce the launch of its IEO on leading crypto exchange...The post PBET Expanding Offline Casinos to Online Scape Joins LATOKEN Launchpad for Its IEO appeared first on Live Bitcoin News."
+    categories="BTC|Exchange|Blockchain|Trading|Sponsored"
+    downvotes="0"
+    guid="https://www.livebitcoinnews.com/?p=55230"
+    id="2687983"
+    imageurl="https://images.cryptocompare.com/news/livebitcoinnews/8n2qhX675EM.jpeg"
+    key="2687983"
+    lang="EN"
+    published_on={1565002847}
+    source="livebitcoinnews"
+    source_info={
+      Object {
+        "img": "https://images.cryptocompare.com/news/default/livebitcoinnews.png",
+        "lang": "EN",
+        "name": "Live Bitcoin News",
+      }
+    }
+    tags="Press Release"
+    title="PBET Expanding Offline Casinos to Online Scape Joins LATOKEN Launchpad for Its IEO"
+    upvotes="0"
+    url="https://www.livebitcoinnews.com/pbet-expanding-offline-casinos-to-online-scape-joins-latoken-launchpad-for-its-ieo/"
+  />
+  <Article
+    body="Litecoin creator Charlie Lee weighs in on the debate between cryptocurrency and government-backed fiat currencies in a new interview with crypto artist V E S A. In the wake of comments made by President Donald Trump and Treasury Secretary Steven Mnuchin, who have described cryptocurrencies as tools for criminals who engage in money laundering, tax [&#8230;]The post Litecoin&#8217;s Charlie Lee: More &#8216;Conflict and Pain&#8217; Coming in Crypto Uprising appeared first on The Daily Hodl."
+    categories="LTC|Regulation|BTC|Altcoin|Fiat"
+    downvotes="0"
+    guid="https://dailyhodl.com/?p=60095"
+    id="2687985"
+    imageurl="https://images.cryptocompare.com/news/dailyhodl/bU9iU30s2j9.jpeg"
+    key="2687985"
+    lang="EN"
+    published_on={1565002842}
+    source="dailyhodl"
+    source_info={
+      Object {
+        "img": "https://images.cryptocompare.com/news/default/dailyhodl.png",
+        "lang": "EN",
+        "name": "The Daily Hodl",
+      }
+    }
+    tags="Altcoins|Bitcoin|Crypto|Litecoin|LTC|mma|News"
+    title="Litecoin’s Charlie Lee: More ‘Conflict and Pain’ Coming in Crypto Uprising"
+    upvotes="0"
+    url="https://dailyhodl.com/2019/08/05/litecoins-charlie-lee-more-conflict-and-pain-coming-in-crypto-uprising/"
+  />
+  <Article
+    body="Weekend trading for Bitcoin has been bullish but things really started to take off during Asian trading this morning. As BTC tapped a twenty four day high, it is now only $2k away from its 2019 peak and reaching it this week is not out of the question. BTC Taps $11,800 Bitcoin has not looked...The post Bitcoin Could Hit a New High This Week, Factors And Trends  appeared first on NewsBTC."
+    categories="BTC|Trading|Asia"
+    downvotes="0"
+    guid="https://www.newsbtc.com/?p=392218"
+    id="2687935"
+    imageurl="https://images.cryptocompare.com/news/newsbtc/80000000000.jpeg"
+    key="2687935"
+    lang="EN"
+    published_on={1565002840}
+    source="newsbtc"
+    source_info={
+      Object {
+        "img": "https://images.cryptocompare.com/news/default/newsbtc.png",
+        "lang": "EN",
+        "name": "NewsBTC",
+      }
+    }
+    tags="Bitcoin|Crypto|bitcoin|china|price|tariffs|trade war|yuan"
+    title="Bitcoin Could Hit a New High This Week, Factors And Trends"
+    upvotes="0"
+    url="https://www.newsbtc.com/2019/08/05/bitcoin-could-hit-a-new-high-this-week-factors-and-trends/"
+  />
+  <Article
+    body="Bitcoin has had a monumental morning on the Asian trading session. With a 10 percent surge on the day BTC has reached a three week high while in China, the Yuan collapses to a 10-year low against the greenback. Are the Chinese loading up on bitcoin? Yuan Down Bitcoin Up As we have seen on countless occasions recently, trading in Asia is dictating market movements for bitcoin and cryptocurrencies. Just a few hours ago BTCRead MoreThe post Is China Loading Up on Bitcoin as Yuan Gets Crushed? appeared first on Bitcoinist.com."
+    categories="BTC|Asia|Trading|Market"
+    downvotes="0"
+    guid="https://bitcoinist.com/?p=114471"
+    id="2687981"
+    imageurl="https://images.cryptocompare.com/news/bitcoinist/cH2A0140000.jpeg"
+    key="2687981"
+    lang="EN"
+    published_on={1565002826}
+    source="bitcoinist"
+    source_info={
+      Object {
+        "img": "https://images.cryptocompare.com/news/default/bitcoinist.png",
+        "lang": "EN",
+        "name": "Bitcoinist",
+      }
+    }
+    tags="Bitcoin|News|bitcoin|china|RMB|Trump|Yuan"
+    title="Is China Loading Up on Bitcoin as Yuan Gets Crushed?"
+    upvotes="0"
+    url="https://bitcoinist.com/is-china-loading-up-on-bitcoin-as-yuan-gets-crushed/"
+  />
+</div>
+`;

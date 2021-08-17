@@ -1,0 +1,58 @@
+{
+  "header": {
+    "home": "Home",
+    "cryptocurrency": "Cryptocurrency",
+    "news": "News",
+    "articles": "Articles",
+    "settings": "Settings",
+    "logout": "Logout",
+    "login": "Log in",
+    "registration": "Sign up"
+  },
+  "footer": {
+    "home": "Home",
+    "cryptocurrency": "Cryptocurrency",
+    "news": "News",
+    "articles": "Articles"
+  },
+  "cryptocurrency": {
+    "top": "Top 100 Cryptocurrencies by Market Capitalization",
+    "name": "Name",
+    "market cap": "Market Cap",
+    "price": "Price",
+    "volume": "Volume (24h)",
+    "sypply": "Circulating Sypply",
+    "change": "Change (24h)",
+    "no news": "No news"
+  },
+  "login": {
+    "email": "Email",
+    "login": "Login",
+    "sending-data": "Sending data...",
+    "password": "Password",
+    "sign-in": "Sign in",
+    "password-error": "minimum {{symbols}} characters required",
+    "email-error": "invalid email address",
+    "response": {
+      "network-error": "Network error",
+      "success": "You are successed login",
+      "password-or-login": "Password or login is wrong. Try login again"
+    }
+  },
+  "registration": {
+    "username": "Username",
+    "email": "Email",
+    "registration": "Registration",
+    "sending-data": "Sending data...",
+    "password": "Password",
+    "sign-up": "Sign up",
+    "username-error": "invalid username",
+    "password-error": "minimum {{symbols}} characters required",
+    "email-error": "invalid email address",
+    "response": {
+      "network-error": "Network error",
+      "success": "You are successed registration",
+      "password-or-login": "Password, username or login is wrong. Try registration again"
+    }
+  }
+}

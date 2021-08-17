@@ -1,0 +1,26 @@
+{
+  "git.ignoreLimitWarning": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "node_modules": true,
+    "build": true
+  },
+  // Languages that should be colorized
+  "colorize.languages": [
+    "css",
+    "sass",
+    "scss",
+    "less",
+    "postcss",
+    "sss",
+    "stylus",
+    "xml",
+    "svg"
+  ],
+  // Specified files extension that should be colorized
+  "colorize.files_extensions": [],
+  // Hide decorations for the current line. Set to `false` to turn it off
+  "colorize.hide_current_line_decorations": true,
+  "editor.formatOnSave": true
+}

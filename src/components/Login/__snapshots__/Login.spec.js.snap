@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login renders properly 1`] = `
+<Login
+  clearLoginMessage={[MockFunction]}
+  errorMessage={null}
+  isLoading={false}
+  login={[MockFunction]}
+  successMessage={null}
+  t={[Function]}
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-12 d-flex"
+      >
+        <div
+          className="shadow-box shadow-box_round-big"
+        >
+          <div
+            className="shadow-box__inner d-flex flex-column"
+          >
+            <section
+              className="login"
+            >
+              <div
+                className="row"
+              >
+                <div
+                  className="col-4 m-auto"
+                >
+                  <h2
+                    className="block__header mb-4 mt-1"
+                  >
+                    login.sign-in
+                  </h2>
+                  <form
+                    className="form"
+                    onSubmit={[Function]}
+                  >
+                    <div
+                      className="form__group"
+                    >
+                      <label>
+                        login.email
+                      </label>
+                      <input
+                        className="form__input"
+                        disabled={false}
+                        name="email"
+                        onChange={[Function]}
+                        placeholder="example@mail.com"
+                        type="text"
+                        value=""
+                      />
+                      <div
+                        className="form__field-error"
+                      />
+                    </div>
+                    <div
+                      className="form__group"
+                    >
+                      <label>
+                        login.password
+                      </label>
+                      <input
+                        className="form__input"
+                        disabled={false}
+                        name="password"
+                        onChange={[Function]}
+                        type="password"
+                        value=""
+                      />
+                      <div
+                        className="form__field-error"
+                      />
+                    </div>
+                    <div
+                      className="form__group"
+                    >
+                      <button
+                        className="blue-button"
+                        disabled={true}
+                        type="submit"
+                      >
+                        <span>
+                          login.login
+                        </span>
+                      </button>
+                    </div>
+                    <p
+                      className="form__message"
+                    />
+                  </form>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Login>
+`;

@@ -1,0 +1,307 @@
+/* Imports */
+
+/* Getting only Bootrap grid system https://getbootstrap.com/docs/4.3/getting-started/contents/#css-files */
+@import '../../node_modules/bootstrap/dist/css/bootstrap-grid.css'
+// @import '../../node_modules/bootstrap/dist/css/bootstrap.css'
+
+/* Fonts */
+@import './fonts'
+
+/* Specification */
+body
+  font-family: 'FuturaFuturisLightC Regular'
+  color: #000000
+  margin: 0
+  padding: 0
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+body, .wrapper
+   min-height: 100vh
+
+@import './colors'
+@import './forms'
+@import './buttons'
+
+.container-box
+  width: 100%
+  margin: 25px 0
+  border: 2px solid $light-gray
+  border-radius: 1px
+  background-color: white
+  padding: 1.25rem
+  &.container-box_compact
+    padding: 0.5rem 1.25rem
+  &.container-box_round
+    border-radius: 5px
+  &.container-box_border-less
+    border: none
+  & .container-box__inner
+    padding: 1rem 3.5rem 1rem 3.5rem
+    &.vdivide
+      border-right: 2px solid #e5f9fa
+
+.shadow-box
+  width: 100%
+  margin: 25px 0
+  background-color: white
+  -webkit-box-shadow: -5px -5px 40px 0px rgba(0,0,0,0.2)
+  -moz-box-shadow: -5px -5px 40px 0px rgba(0,0,0,0.2)
+  box-shadow: -5px -5px 40px 0px rgba(0,0,0,0.2)
+  & .shadow-box_gradient
+    background: -moz-linear-gradient(17.45% -52.3% -45deg,rgba(42, 37, 221, 0.6) 0%,rgba(0, 205, 253, 0.6) 100%)
+    background: -webkit-linear-gradient(-45deg, rgba(42, 37, 221, 0.6) 0%, rgba(0, 205, 253, 0.6) 100%)
+    background: -webkit-gradient(linear,17.45% -52.3% ,82.55% 152.3% ,color-stop(0,rgba(42, 37, 221, 0.6) ),color-stop(1,rgba(0, 205, 253, 0.6) ))
+    background: -o-linear-gradient(-45deg, rgba(42, 37, 221, 0.6) 0%, rgba(0, 205, 253, 0.6) 100%)
+    background: -ms-linear-gradient(-45deg, rgba(42, 37, 221, 0.6) 0%, rgba(0, 205, 253, 0.6) 100%)
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#2A25DD', endColorstr='#00CDFD' ,GradientType=0)"
+    background: linear-gradient(135deg, rgba(42, 37, 221, 0.6) 0%, rgba(0, 205, 253, 0.6) 100%)
+    filter: alpha(opacity=60) progid:DXImageTransform.Microsoft.Alpha(opacity=60) progid:DXImageTransform.Microsoft.gradient(startColorstr='#2A25DD',endColorstr='#00CDFD' , GradientType=1)
+  &.shadow-box_round-big
+    border-radius: 12px
+    & .shadow-box__inner
+      border-radius: 12px
+  &.shadow-box_round-medium
+    border-radius: 6px
+    & .shadow-box__inner
+      border-radius: 6px
+  & .shadow-box__inner
+    padding: 1.25rem
+    &.shadow-box__inner_compact
+      padding: 0.5rem 1.25rem
+    &.shadow-box__inner_wide
+      padding: 3rem 4rem 3rem 4rem
+      &.vdivide
+        border-right: 2px solid #e5f9fa
+        border-radius: 0
+    &.shadow-box__inner_medium // TODO: merge and rename
+      padding: 1rem 3.5rem
+      &.vdivide
+        border-right: 2px solid #e5f9fa
+        border-radius: 0
+    &.shadow-box__inner_medium-left // TODO: merge and rename
+      padding: 1rem 6rem 1rem 1rem
+      &.vdivide
+        border-right: 2px solid #e5f9fa
+        border-radius: 0
+    &.shadow-box__inner_medium-right // TODO: merge and rename
+      padding: 1rem 1rem 1rem 3rem
+      &.vdivide
+        border-right: 2px solid #e5f9fa
+        border-radius: 0
+    &.shadow-box_menu
+      cursor: pointer
+      font-family: 'FuturaFuturisLightC Regular'
+      font-weight: 700
+      padding: 0.7rem 0 0.2em 0
+      font-size: 1.3rem
+      color: $text-gray
+      &.shadow-box_menu_active
+        color: #ffffff
+        background: -moz-linear-gradient(0% 50% 0deg,rgba(42, 37, 221, 0.77) 0%,rgba(0, 205, 253, 0.77) 100%)
+        background: -webkit-linear-gradient(0deg, rgba(42, 37, 221, 0.77) 0%, rgba(0, 205, 253, 0.77) 100%)
+        background: -webkit-gradient(linear,0% 50% ,100% 50% ,color-stop(0,rgba(42, 37, 221, 0.77) ),color-stop(1,rgba(0, 205, 253, 0.77) ))
+        background: -o-linear-gradient(0deg, rgba(42, 37, 221, 0.77) 0%, rgba(0, 205, 253, 0.77) 100%)
+        background: -ms-linear-gradient(0deg, rgba(42, 37, 221, 0.77) 0%, rgba(0, 205, 253, 0.77) 100%)
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#2A25DD', endColorstr='#00CDFD' ,GradientType=0)"
+        background: linear-gradient(90deg, rgba(42, 37, 221, 0.77) 0%, rgba(0, 205, 253, 0.77) 100%)
+        filter: alpha(opacity=77) progid:DXImageTransform.Microsoft.Alpha(opacity=77) progid:DXImageTransform.Microsoft.gradient(startColorstr='#2A25DD',endColorstr='#00CDFD' , GradientType=1)
+
+.block__header
+  font-size: 1.6rem
+  font-family: 'FuturaFuturisLightC Regular'
+  text-transform: uppercase
+  font-weight: 700
+  color: $text-gray
+  padding-left: 20px
+  text-align: center
+  &_small
+    font-size: 1.4rem
+    text-transform: none
+  &_regular
+    font-weight: 400
+    font-size: 1.4rem
+
+header
+  background: linear-gradient(156deg, rgba(42, 63, 221, 1) 0%, rgba(23, 147, 235, 1) 41.9%, rgba(7, 222, 248, 1) 81.7%, rgba(0, 251, 253, 1) 100%)
+  & .header__item
+    text-decoration: none
+    border-radius: 6px
+    & span
+      color: white
+      font-family: 'FuturaBookC Regular'
+      text-transform: uppercase
+      margin-left: 0.25rem
+    &.header__item_light
+      &.active
+        background: rgba(255,255,255,.08)
+      &:hover
+        background: rgba(255,255,255,.08)
+    &.header__item__logo
+      & span
+        font-size: 1.5rem
+    &.header__item__account
+      & span
+        font-size: 20px
+        text-transform: none
+      & img
+        vertical-align: text-bottom
+
+.menu-dropdown
+  cursor: pointer
+  & #menu-dropdown__element:after
+    content: none
+  & .menu-dropdown__item
+    text-transform: uppercase
+    font-family: "FuturaBookC Regular"
+    padding: 0 10px
+    & img
+      height: 22px
+      margin-right: 10px
+    &:active
+      background-color: #ffffff
+
+footer
+  background-size: 100%
+  background-color: #515151
+  width: 100%
+  color: white
+  font-family: 'FuturaBookC Regular'
+  & .footer__link
+    text-decoration: none
+    & span
+      color: white
+      text-transform: uppercase
+    &:hover
+      & span
+        color: darken(white, 20%)
+  & img
+    height: 1rem
+  & .footer__address
+    font-size: 12px
+
+.news
+  & .news__empty, .news__error
+    color: #337ab7
+    text-align: center
+    font-size: 21px
+    margin-top: 2rem
+    margin-bottom: 5rem
+  & .news__articles-list
+    margin: 3rem 0.5rem 0 0.5rem
+    & .news__article
+      margin-top: 0.5rem
+      border-bottom: 1px solid #f5f5f5
+      min-height: 115px
+      & .news__article-image
+        float: left
+        width: 120px
+        & img
+          width: 100px
+      & .news__name
+        color: #f79a35
+        font-size: 17px
+        margin-right: 15px
+        font-family: 'FuturaDemiC Regular'
+      & .news__time
+        color: #999999
+        font-size: 13px
+      & .news__title
+        margin-bottom: 0
+        line-height: 18px
+        & a
+          color: #337ab7
+          font-family: FuturaDemiC Regular
+          font-size: 18px
+          text-decoration: none
+          &:hover
+            color: darken(#337ab7, 10%)
+      & .news__categories-title
+        color: #999999
+        font-size: 14px
+      & .news__categories-list
+        color: #53ba9e
+        font-family: 'FuturaDemiC Regular'
+        font-size: 14px
+      & .news__category
+        color: #999999
+      & .news__body
+        line-height: 1.2
+        margin-bottom: 0.3rem
+    & .news__article:last-child
+      border-bottom: none
+
+.login
+
+
+
+
+// .login
+//   margin-top: 10px
+//   & .box
+//     padding: 20px 40px 5px 40px
+//     background-color: #f7f7f7
+//   & .operations__body
+//     color: $text-gray
+//     & .operations__buy
+//       > p
+//         > span:nth-child(1)
+//           font-size: 24px
+//           color: $text-gray
+//           font-weight: bold
+//         > span:nth-child(2)
+//           font-size: 18px
+//           color: #000000
+//           font-weight: bold
+//           opacity: .4
+//         > span:nth-child(3)
+//           font-size: 14px
+//           color: #000000
+//           font-weight: bold
+//           opacity: .4
+//           line-height: 1rem
+//   & .operations__form
+//     & .form-control
+//       border-radius: 0
+//       border: 1px solid rgba(170, 170, 170, 255)
+//       &:focus
+//         box-shadow: none
+//         border-color: #f0b90b
+//       &.error
+//         border-color: $error
+//     & .operations__input-currency
+//       position: absolute
+//       top: 9px
+//       left: 230px
+//       color: #b3b3b3ff
+//     & .form-group
+//       & > label
+//         text-align: right
+//         padding-right: 0
+//         &:first-child
+//           color: $text-gray
+//         &:last-child
+//           color: $blue
+//   & .operations__buy_button
+//     font-size: 12px
+//   & .operations__sell-button
+//     font-size: 12px
+//   & .nav-pills
+//     & .nav-item
+//       margin-right: 2px
+//       & .nav-link
+//         border-top: 1px solid #11c7db
+//         border-left: 1px solid #11c7db
+//         border-right: 1px solid #11c7db
+//         border-radius: 0
+//         color: $text-gray
+//         padding-top: 4px
+//         padding-bottom: 4px
+//         &.active
+//           background-color: #11c7db
+//           color: #000000
+//           opacity: 0.7
+//   & .operations__error-field
+//     text-align: center
+//     color: $error
+//     height: 24px

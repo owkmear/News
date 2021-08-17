@@ -1,0 +1,16 @@
+{
+  "name": "coininfo-server",
+  "version": "1.0.0",
+  "description": "Server for storage accounts data",
+  "license": "Proprietary software",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "async": "^3.1.0",
+    "cookies": "^0.7.3",
+    "express": "^4.17.1"
+  }
+}
